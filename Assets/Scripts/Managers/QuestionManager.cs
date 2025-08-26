@@ -38,6 +38,7 @@ public class QuestionManager : MonoBehaviour
 
         foreach (CardBoard card in boardCards)
         {
+            GameManager.Instance.GetAudioManager().PlayMusicWithFade(AudioManager.MusicList.Questions);
             yield return ProcessCard(card);
         }
     }
@@ -64,7 +65,9 @@ public class QuestionManager : MonoBehaviour
         _timeRanOut = false;
 
         timer.StartTimer();
+        
         yield return new WaitUntil(() => _playerHasAnswered || _timeRanOut);
+        GameManager.Instance.GetAudioManager().StopMusic();
 
         HandleAnswerResult(card, difficulty);
 

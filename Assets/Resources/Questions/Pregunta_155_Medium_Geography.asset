@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9bb1b92f17d1194dadbb2f4a83774de, type: 3}
   m_Name: Pregunta_155_Medium_Geography
   m_EditorClassIdentifier: 
-  question: "\xBFQu\xE9 pa\xEDs tiene la capital llamada Estambul?"
+  question: "\xBFQu\xE9 pa\xEDs tiene la capital llamada Ankara?"
   correctAnswer: "Turqu\xEDa"
   wrongAnswers:
   - Grecia

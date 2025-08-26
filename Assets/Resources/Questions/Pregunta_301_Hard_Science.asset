@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pregunta_301_Hard_Science
   m_EditorClassIdentifier: 
   question: "\xBFQu\xE9 tipo de enlace une los \xE1tomos en una mol\xE9cula de ox\xEDgeno
-    (O\u2082)?"
+    (O2)?"
   correctAnswer: Enlace covalente
   wrongAnswers:
   - "Enlace i\xF3nico"

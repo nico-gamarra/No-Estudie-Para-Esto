@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Pregunta_274_Easy_Science
   m_EditorClassIdentifier: 
   question: "\xBFCu\xE1l es la f\xF3rmula qu\xEDmica del agua?"
-  correctAnswer: "H\u2082O"
+  correctAnswer: H2O
   wrongAnswers:
-  - "H\u2082O\u2082"
-  - "HO\u2082"
+  - H2O2
+  - HO2
   - OH
   difficulty: 0
   subject: 1

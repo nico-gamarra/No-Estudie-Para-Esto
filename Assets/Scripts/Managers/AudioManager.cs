@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
     {
         Menu,
         Game,
+        Questions,
     }
 
     [SerializeField] private float fadeDuration;
@@ -141,4 +142,5 @@ public class AudioManager : MonoBehaviour
     }
     
     public MusicList GetActualMusic() => _actualMusic;
+    public void StopMusic() => musicSource.Stop();
 }

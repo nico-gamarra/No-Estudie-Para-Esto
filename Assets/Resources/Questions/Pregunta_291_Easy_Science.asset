@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pregunta_291_Easy_Science
   m_EditorClassIdentifier: 
   question: "\xBFQu\xE9 fen\xF3meno natural se debe a la actividad del magma?"
-  correctAnswer: "Eruoci\xF3n Volc\xE1nica"
+  correctAnswer: "Erupci\xF3n Volc\xE1nica"
   wrongAnswers:
   - "Hurac\xE1n"
   - Terremoto

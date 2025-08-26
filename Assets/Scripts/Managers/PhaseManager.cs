@@ -103,6 +103,7 @@ public class PhaseManager : MonoBehaviour
 
     private IEnumerator ResolutionPhase()
     {
+        GameManager.Instance.GetAudioManager().PlayMusicWithFade(AudioManager.MusicList.Game);
         yield return GameManager.Instance.GetUIManager().BattleMode();
         yield return GameManager.Instance.GetCombatManager().ResolveCombat();
         yield return GameManager.Instance.GetUIManager().NormalMode();

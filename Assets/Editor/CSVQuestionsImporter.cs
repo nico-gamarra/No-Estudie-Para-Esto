@@ -38,7 +38,7 @@ public class CSVQuestionsImporter
             }
 
             string fileName = $"Pregunta_{i}_{newQuestion.difficulty}_{newQuestion.subject}";
-            string assetPath = $"Assets/Resources/Questions/{fileName}.asset";
+            string assetPath = $"Assets/Resources/en/{fileName}.asset";
 
             AssetDatabase.CreateAsset(newQuestion, assetPath);
         }

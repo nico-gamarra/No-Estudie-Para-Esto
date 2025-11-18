@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -19,11 +21,22 @@ public class QuestionManager : MonoBehaviour
     private bool _playerHasAnswered;
     private bool _playerAnswersCorrectly;
     private bool _timeRanOut;
+    private string language;
+
+    private void OnEnable()
+    {
+        LocalizationSettings.SelectedLocaleChanged += ChangeLanguage;
+    }
+    
+    private void OnDisable()
+    {
+        LocalizationSettings.SelectedLocaleChanged -= ChangeLanguage;
+    }
 
     private void Start()
     {
         InitializeQuestionBank();
-        LoadQuestions();
+        LoadQuestions("es");
     }
     
     public IEnumerator StartQuestions()
@@ -149,9 +162,10 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    private void LoadQuestions()
+    private void LoadQuestions(string lang)
     {
-        var allQuestions = Resources.LoadAll<QuestionData>("Questions");
+        string path = lang;
+        var allQuestions = Resources.LoadAll<QuestionData>(path);
 
         foreach (var question in allQuestions)
         {
@@ -160,6 +174,12 @@ public class QuestionManager : MonoBehaviour
                 _questionBank[key].Add(question);
         }
     }
+
+    private void ClearQuestionBank()
+    {
+        _questionBank.Clear();
+    }
+
     #endregion
 
     #region Utilities
@@ -169,6 +189,22 @@ public class QuestionManager : MonoBehaviour
     }
     public void PlayerAnswersCorrectly(bool correct) => _playerAnswersCorrectly = correct;
     public void TimeRanOut(bool ranOut) => _timeRanOut = ranOut;
+
+    private void ChangeLanguage(Locale lang)
+    {
+        language = (lang.ToString() == "English (en)") ? "en" : "es";
+        print(language);
+        ClearQuestionBank();
+        StartCoroutine(WaitForQuestions());
+    }
+
+    private IEnumerator WaitForQuestions()
+    {
+        yield return new WaitForEndOfFrame();
+        InitializeQuestionBank();
+        LoadQuestions(language);
+    }
+
     #endregion
 
     #region Getters

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bb1b92f17d1194dadbb2f4a83774de, type: 3}
+  m_Name: Pregunta_198_Easy_History
+  m_EditorClassIdentifier: 
+  question: What revolution began in 1917 in Russia?
+  correctAnswer: "Revoluci\xF3n Rusa"
+  wrongAnswers:
+  - "Revoluci\xF3n Francesa"
+  - "Revoluci\xF3n Industrial"
+  - "Revoluci\xF3n Americana"
+  difficulty: 0
+  subject: 0

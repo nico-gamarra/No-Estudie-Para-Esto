@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bb1b92f17d1194dadbb2f4a83774de, type: 3}
+  m_Name: Pregunta_74_Medium_Entertainment
+  m_EditorClassIdentifier: 
+  question: "Who sings the song \u201CShape of You\u201D?"
+  correctAnswer: Ed Sheeran
+  wrongAnswers:
+  - Justin Bieber
+  - Shawn Mendes
+  - Harry Styles
+  difficulty: 1
+  subject: 2
